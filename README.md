@@ -31,16 +31,21 @@ cd redis-cluster
 docker build -t redis-cluster /data/docker/redis-cluster
 ```
 
+
 2、快速构建多个容器
 
 ```php
 docker-compose up -d 
 ```
 ![](./example.png)
+
 [注：安装docker-compose](https://www.haveyb.com/article/239 "安装docker-compose")
+
+
 
 3、使用docker ps -a 查看结果
 
 ![](./second.png)
+
 [教程地址：使用 docker-compose 构建 redis-cluster 集群 　](https://www.haveyb.com/article/237 "使用 docker-compose 构建 redis-cluster 集群 　")
 
