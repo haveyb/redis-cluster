@@ -21,6 +21,7 @@ git clone https://github.com/haveyb/redis-cluster.git
 cd redis-cluster
 ```
 
+
 #### 三、开始构建
 　
 1、构建镜像
