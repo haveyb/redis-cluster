@@ -16,7 +16,7 @@ services:
      tty: true
      privileged: true
      volumes: ["/data/docker/redis-cluster/conf:/config"]
-     entrypoint: redis.sh
+     entrypoint:
        - /bin/bash
        - redis.sh
   redis-master2:
