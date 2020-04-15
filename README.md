@@ -44,6 +44,7 @@ docker-compose up -d
 
 ![](./second.png)
 
+[教程地址：使用 docker-compose 构建 redis-cluster 集群 　](https://www.haveyb.com/article/237 "使用 docker-compose 构建 redis-cluster 集群 　")
 
 
 
