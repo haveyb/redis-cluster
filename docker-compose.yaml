@@ -12,7 +12,7 @@ services:
      stdin_open: true
      networks:
         redis-master:
-          ipv4_address: 172.20.0.1
+          ipv4_address: 172.20.0.2
      tty: true
      privileged: true
      volumes: ["/data/docker/redis-cluster/conf:/config"]
@@ -27,7 +27,7 @@ services:
               - PORT=6392
        networks:
           redis-master:
-             ipv4_address: 172.20.0.2
+             ipv4_address: 172.20.0.3
        ports:
          - "6392:6392"
          - "16392:16392"
@@ -46,7 +46,7 @@ services:
               - PORT=6393
        networks:
           redis-master:
-            ipv4_address: 172.20.0.3
+            ipv4_address: 172.20.0.4
        ports:
          - "6393:6393"
          - "16393:16393"
@@ -65,7 +65,7 @@ services:
             - PORT=6394
        networks:
           redis-slave:
-             ipv4_address: 172.30.0.1
+             ipv4_address: 172.30.0.2
        ports:
          - "6394:6394"
          - "16394:16394"
@@ -79,7 +79,7 @@ services:
   redis-salve-2:
        image: redis-cluster
        working_dir: /config
-       container_name: redis-salve2
+       container_name: redis-salve-2
        environment:
              - PORT=6395
        ports:
@@ -88,7 +88,7 @@ services:
        stdin_open: true
        networks:
           redis-slave:
-              ipv4_address: 172.30.0.2
+              ipv4_address: 172.30.0.3
        tty: true
        privileged: true
        volumes: ["/data/docker/redis-cluster/conf:/config"]
@@ -107,7 +107,7 @@ services:
        stdin_open: true
        networks:
           redis-slave:
-            ipv4_address: 172.30.0.3
+            ipv4_address: 172.30.0.4
        tty: true
        privileged: true
        volumes: ["/data/docker/redis-cluster/conf:/config"]
@@ -129,6 +129,3 @@ networks:
          config:
             -
              subnet: 172.30.0.0/16
-  redis-test:
-     external:
-       name: mynetwork
