@@ -1,7 +1,7 @@
 # redis-cluster
 docker快速构建三主三从 redis-cluster
 
-一、节点规划（三主三从）
+#### 一、节点规划（三主三从）
 
 | 容器名称  |  容器IP地址 | 映射端口号  |
 | ------------ | ------------ | ------------ |
@@ -13,18 +13,17 @@ docker快速构建三主三从 redis-cluster
 | redis-slave-3  | 172.30.0.4  | 6396->6396  |
 
 　　
-
-二、下载文件
+#### 二、下载文件
 ```
 mkdir /data/docker
 cd /data/docker
 git clone https://github.com/haveyb/redis-cluster.git
 cd redis-cluster
 ```
-　　
 
-三、开始构建
 
+#### 三、开始构建
+　
 1、构建镜像
 
 ```php
@@ -37,10 +36,13 @@ docker build -t redis-cluster /data/docker/redis-cluster
 docker-compose up -d 
 ```
 ![](./example.png)
+
 [注：安装docker-compose](https://www.haveyb.com/article/239 "安装docker-compose")
+
 
 3、使用docker ps -a 查看结果
 
 ![](./second.png)
+
 [教程地址：使用 docker-compose 构建 redis-cluster 集群 　](https://www.haveyb.com/article/237 "使用 docker-compose 构建 redis-cluster 集群 　")
 
