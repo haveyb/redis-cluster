@@ -1,1 +1,1 @@
-redis-server  /config/nodes-${PORT}.conf
+redis-server /config/nodes-${PORT}.conf &
