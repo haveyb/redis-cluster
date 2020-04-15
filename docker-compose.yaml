@@ -16,8 +16,8 @@ services:
      tty: true
      privileged: true
      volumes: ["/data/docker/redis-cluster/conf:/config"]
-     entrypoint:
-       - /usr/sbin/init
+     entrypoint: redis.sh
+       - /bin/bash
        - redis.sh
   redis-master2:
        image: redis-cluster
@@ -36,7 +36,7 @@ services:
        privileged: true
        volumes: ["/data/docker/redis-cluster/conf:/config"]
        entrypoint:
-         - /usr/sbin/init
+         - /bin/bash
          - redis.sh
   redis-master3:
        image: redis-cluster
@@ -55,7 +55,7 @@ services:
        privileged: true
        volumes: ["/data/docker/redis-cluster/conf:/config"]
        entrypoint:
-         - /usr/sbin/init
+         - /bin/bash
          - redis.sh
   redis-slave-1:
        image: redis-cluster
@@ -74,7 +74,7 @@ services:
        privileged: true
        volumes: ["/data/docker/redis-cluster/conf:/config"]
        entrypoint:
-         - /usr/sbin/init
+         - /bin/bash
          - redis.sh
   redis-salve-2:
        image: redis-cluster
@@ -93,7 +93,7 @@ services:
        privileged: true
        volumes: ["/data/docker/redis-cluster/conf:/config"]
        entrypoint:
-         - /usr/sbin/init
+         - /bin/bash
          - redis.sh
   redis-salve-3:
        image: redis-cluster
@@ -112,7 +112,7 @@ services:
        privileged: true
        volumes: ["/data/docker/redis-cluster/conf:/config"]
        entrypoint:
-         - /usr/sbin/init
+         - /bin/bash
          - redis.sh
 networks:
   redis-master:
