@@ -22,16 +22,16 @@ git clone https://github.com/haveyb/redis-cluster.git
 cd redis-cluster
 ```
 　　
-
+　
 三、开始构建
-
+　
 1、构建镜像
 
 ```php
 docker build -t redis-cluster /data/docker/redis-cluster
 ```
 
-
+　
 2、快速构建多个容器
 
 ```php
@@ -42,7 +42,7 @@ docker-compose up -d
 [注：安装docker-compose](https://www.haveyb.com/article/239 "安装docker-compose")
 
 
-
+　
 3、使用docker ps -a 查看结果
 
 ![](./second.png)
